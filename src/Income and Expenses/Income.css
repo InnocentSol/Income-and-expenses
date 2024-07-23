@@ -1,0 +1,83 @@
+.ListContainer {
+    background:#fdbccf;
+    box-shadow: #e486aa;
+    border-radius: 5px;
+    border: #e6c9ca 3px double;
+    width: 70%;
+    margin: auto;
+    font-family: 'Skranji', cursive;
+    color: #e46266;
+}
+
+.ListInput {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ListInput > label {
+    width: min-content;
+    min-width: 25%;
+    font-size: 1.7rem;
+    letter-spacing: .03rem;
+    font-weight: 600;
+    margin: 10px;
+    
+}
+
+.ListInput > input {
+    width: 40%;
+    padding: 0.6em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.ListInput > select {
+    width: 43%;
+    padding: 0.6em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.SubmitButton > button {
+    margin: 10px auto;
+    width: 250px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    font-family: 'Skranji', cursive;
+    color: #e46266;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #ffffff, #ffffff);
+    border: #e6c9ca 5px double;
+    box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
+}
+
+.SubmitButton > button:hover {
+    color: #ffffff;
+    background: radial-gradient(circle, #e46266, #e46266);
+    box-shadow: 0px 0 5px 5px rgba(255, 255, 255, 0.2)
+}
+
+.SubmitButton > button:active {
+    color: rgb(255, 255, 255);
+    background: radial-gradient(circle, #e46266, #e46266);
+    box-shadow: 0px 0 5px 5px rgba(255, 255, 255, 0.2)
+}
