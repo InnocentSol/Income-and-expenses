@@ -5,7 +5,8 @@ import './Incomelist.css';
 function Incomelist(props) {
     const INEXPlist = props.INEXPlist
     const [curInxp, setCurrentInxp] = useState("Income");
-    const filteredList = INEXPlist.filter(l => l.inxp === curInxp);
+    const filteredList = INEXPlist.filter(t => t.inxp === curInxp);
+    
 
     return (
         <div>
@@ -18,11 +19,9 @@ function Incomelist(props) {
                 </label>
             </div>
             <div>
-                {filteredList.length ===0 ?<div>Not Found</div> : filteredList.map((e)=> (
+                {filteredList.length ===0 ?<div>Not Found</div> : filteredList.map((e,index)=> (
                 <Itemlist
-                deleteHandler={props.deleteHandler}
-                editHandler={props.editHandler}
-                key = {e.id}
+                key = {index}
                 id = {e.id}
                 amount = {e.amount}
                 category = {e.category}

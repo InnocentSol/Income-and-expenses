@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./Income.css"
+import { Listcontext } from '../ListContext';
 
 function Income(props) {
+    const ctx = useContext(Listcontext)
     const [currentAmount, setCurrentAmount] = useState ("");
     const [currentCategory, setCurrentCategory] = useState ("");
     const [currentInxp, setCurrentInxp] = useState ("Income");
@@ -29,8 +31,9 @@ function Income(props) {
             pay : currentPay,
         };
 
-        props.onAddList(newList);
-
+        console.log(newList)
+        ctx.addListHandler(newList);
+        
         setCurrentAmount("");
         setCurrentCategory("");
         setCurrentInxp("Income");

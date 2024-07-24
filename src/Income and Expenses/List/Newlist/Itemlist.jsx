@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Itemlist.css'
+import { Listcontext } from '../../../ListContext';
 
 function Itemlist(props) {
+    const ctx = useContext(Listcontext);
     const [isEdit, setIsEdit] = useState(false);
     const [curAmount,setCurAmount] = useState("");
     const [curCategory,setCurCategory] = useState("");
@@ -24,7 +26,7 @@ function Itemlist(props) {
             inxp : curInxp,
             pay : curPay,
         };
-        props.editHandler(props.id, editValues);
+        ctx.editHandler(props.id, editValues);
         setIsEdit(false);
     }
 
@@ -56,7 +58,7 @@ function Itemlist(props) {
             <div>{props.inxp}</div>
             <div>{props.pay}</div>
             <button onClick={onClickEdit} className='btn btn-warning'>Edit</button>
-            <button onClick={() => props.deleteHandler(props.id)} className='btn btn-danger'>Delete</button>
+            <button onClick={() => ctx.deleteHandler(props.id)} className='btn btn-danger'>Delete</button>
         </div>
     )
 }
